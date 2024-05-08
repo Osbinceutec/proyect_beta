@@ -63,16 +63,16 @@
                     <br>
                     <b>Seleccionar problema:</b></p>
                     <br>
-                    <button id="" class="button_ventana">Faltan programas</button>
-                    <button class="button_ventana">Necesita soporte</button>
-                    <button class="button_ventana">Falta un componente</button>
-                    <button class="button_ventana">En mal estado</button>
+                    <button onclick="cambiarcolor('blue')" class="button_ventana">Faltan programas</button>
+                    <button onclick="cambiarcolor('yellow')" class="button_ventana">Necesita soporte</button>
+                    <button onclick="cambiarcolor('orange')" class="button_ventana">Falta un componente</button>
+                    <button onclick="cambiarcolor('red')" class="button_ventana">En mal estado</button>
                     <br>
                     <br>
                     <form action="mensaje.php" method="post">
-                        <input class="text" type="text" name="mensaje" placeholder="Describe el problema que tuviste con tu computadora">
                         <input class="enviar" type="submit" value="Enviar" >
                     </form>
+                    <button onclick="myFunction()">button</button>
                     
                     
                     
