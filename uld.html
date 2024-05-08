@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        #myDiv {
+            width: 200px;
+            height: 200px;
+            background-color: #f0f0f0;
+        }
+    </style>
+</head>
+<body>
+
+<button onclick="myFunction()">Haz clic aquí</button>
+
+<div id="myDiv"></div>
+
+<script>
+function myFunction() {
+    var comment = prompt("Por favor, introduce tu comentario");
+    if (comment != null) {
+        document.getElementById("myDiv").innerHTML = comment;
+        document.getElementById("myDiv").style.backgroundColor = "yellow";
+        alert("Tu comentario ha sido guardado y se enviará por correo electrónico: " + comment);
+    }
+}
+</script>
+
+</body>
+</html>

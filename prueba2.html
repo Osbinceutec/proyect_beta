@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        /* Estilos para el fondo oscuro */
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5); /* Color oscuro con opacidad */
+            z-index: 1000; /* Asegura que esté por encima de otros elementos */
+        }
+
+        /* Estilos para la ventana flotante (modal) */
+        .modal {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+            z-index: 1001; /* Asegura que esté por encima del fondo oscuro */
+        }
+    </style>
+</head>
+<body>
+    <!-- Fondo oscuro -->
+    <div class="overlay"></div>
+
+    <!-- Ventana flotante (modal) -->
+    <div class="modal">
+        <h2>¡Bienvenido!</h2>
+        <p>Este es un ejemplo de ventana flotante.</p>
+        <button onclick="closeModal()">Cerrar</button>
+    </div>
+
+    <!-- JavaScript para cerrar la ventana flotante -->
+    <script>
+        function closeModal() {
+            document.querySelector('.overlay').style.display = 'none';
+            document.querySelector('.modal').style.display = 'none';
+        }
+    </script>
+</body>
+</html>

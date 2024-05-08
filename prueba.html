@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ventana Flotante Animada</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        /* Estilos para la ventana flotante */
+        .ventana-flotante {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: #fff;
+            padding: 20px;
+            border: 1px solid #ccc;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            display: none; /* Oculta la ventana por defecto */
+        }
+    </style>
+</head>
+<body>
+    <a href="#" onclick="abrirVentana()">Abrir Ventana Animada</a>
+    <div class="ventana-flotante" id="miVentana">
+        Contenido de la ventana flotante.
+        <a href="#" onclick="cerrarVentana()">Cerrar</a>
+    </div>
+
+    <script>
+        function abrirVentana() {
+            $("#miVentana").slideDown();
+        }
+
+        function cerrarVentana() {
+            $("#miVentana").slideUp();
+        }
+    </script>
+</body>
+</html>
