@@ -32,14 +32,11 @@ let colorSeleccionado = ''; // Variable para almacenar el color seleccionado
                 default:
                     div.style.backgroundImage = 'linear-gradient(white 90%, green)'; // Color inicial si no se selecciona ningún color
             }
-            alert("Tu mensaje a sido enviado correctamente");   
+            alert("Tu mensaje a sido enviado correctamente");  
+            
+            $("#box_L8_A01").slideUp();
 
-            document.getElementById("L8-A01_estado").style.display = "block";
-        var L8_A01_estado = document.getElementById("L8-A01_estado");
-        var L8_A01_report = document.getElementById("L8-A01_report");
-
-            L8_A01_estado.style.display = "block";        
-            L8_A01_report.style.display = "none";
+            
         }
 
         function report() {
@@ -51,6 +48,8 @@ let colorSeleccionado = ''; // Variable para almacenar el color seleccionado
                 L8_A01_report.style.display = "block";
                 alert("Reporta el problema que tienes con el equipo"); 
     }
+
+    
 
 
 
