@@ -1,30 +1,26 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <style>
-        #myDiv {
-            width: 200px;
-            height: 200px;
+        .seleccionado {
             background-color: #f0f0f0;
+            border: 2px solid #333;
         }
     </style>
 </head>
 <body>
+    <button class="boton">Botón 1</button>
+    <button class="boton">Botón 2</button>
+    <button class="boton">Botón 3</button>
 
-<button onclick="myFunction()">Haz clic aquí</button>
-
-<div id="myDiv"></div>
-
-<script>
-function myFunction() {
-    var comment = prompt("Por favor, introduce tu comentario");
-    if (comment != null) {
-        document.getElementById("myDiv").innerHTML = comment;
-        document.getElementById("myDiv").style.backgroundColor = "yellow";
-        alert("Tu comentario ha sido guardado y se enviará por correo electrónico: " + comment);
-    }
-}
-</script>
-
+    <script>
+        $('.boton').click(function() {
+            $('.boton').removeClass('seleccionado'); // Remueve la clase de todos los botones
+            $(this).addClass('seleccionado'); // Agrega la clase al botón presionado
+        });
+    </script>
 </body>
 </html>
